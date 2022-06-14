@@ -1,3 +1,8 @@
+body {
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+
 .fw-300 {
   font-weight: 300;
   font-family: "Overpass", sans-serif;
@@ -33,119 +38,333 @@
   padding-right: 24px;
 }
 
-header {
-  /* Add a black background color to the top navigation */
-  /* Style the links inside the navigation bar */
-  /* Add an active class to highlight the current page */
-  /* Hide the link that should open and close the topnav on small screens */
-  /* Dropdown container - needed to position the dropdown content */
-  /* Style the dropdown button to fit inside the topnav */
-  /* Style the dropdown content (hidden by default) */
-  /* Style the links inside the dropdown */
-  /* Add a dark background on topnav links and the dropdown button on hover */
-  /* Add a grey background to dropdown links on hover */
-  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
-}
-header .topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-header .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-header .active {
-  background-color: #04aa6d;
-  color: white;
-}
-header .topnav .icon {
-  display: none;
-}
-header .dropdown {
-  float: left;
-  overflow: hidden;
-  position: static;
-}
-header .dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-header .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-header .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-header .topnav a:hover,
-header .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-header .dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-header .dropdown:hover .dropdown-content {
-  display: block;
+.btn {
+  border-radius: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 576px) {
-  header .topnav a:not(:first-child),
-header .dropdown .dropbtn {
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.white-btn {
+  background-color: white;
+  border-color: hsl(0deg, 0%, 100%);
+  color: #FF7B86;
+}
+
+.white-btn:hover {
+  background-color: #FF7B86;
+  border-color: #FF7B86;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.transparent-btn {
+  background-color: transparent;
+  border-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.transparent-btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: hsl(0deg, 0%, 100%);
+  color: #FF7B86;
+}
+
+.top {
+  background: linear-gradient(to right, hsl(13deg, 100%, 72%) 0%, hsl(353deg, 100%, 62%) 100%);
+  border-radius: 0 0 0 10em;
+  position: relative;
+  overflow: hidden;
+}
+.top nav {
+  z-index: 10;
+}
+.top .margin-right {
+  margin-right: auto;
+}
+.top .nav-link {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+.top .navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 0px solid black;
+  border-radius: 0.25rem;
+  color: white !important;
+  z-index: 2;
+}
+.top .navbar-toggler-icon {
+  display: flex;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  align-items: center;
+  justify-content: center;
+  background: 50%/100% 100% no-repeat;
+}
+.top .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top .dropdown-menu {
+  background: hsl(0deg, 0%, 100%);
+}
+.top .dropdown-menu .dropdown-item {
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+.top .dropdown-menu .dropdown-item:hover {
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+  background: hsl(0deg, 0%, 100%);
+}
+.top .jumbotron {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+}
+
+.top::after {
+  content: "";
+  background-image: url(../images/bg-pattern-intro.svg);
+  width: 238%;
+  height: 165%;
+  left: -12em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -15em;
+  position: absolute;
+}
+
+.section-1 {
+  color: hsl(208deg, 49%, 24%);
+  padding-top: 16em;
+  padding-bottom: 8em;
+  margin-bottom: 14rem;
+}
+.section-1 .heading {
+  margin: 0 auto;
+  text-align: center;
+}
+.section-1 .content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  width: 100%;
+  text-align: center;
+}
+.section-1 .content-grid .description {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+.section-1 .content-grid .description p {
+  line-height: 1.5;
+}
+.section-1 .content-grid .image {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.section-1 .content-grid .image .mobile-image {
+  display: block;
+  width: 80%;
+  height: auto;
+}
+.section-1 .content-grid .image .desktop-image {
+  display: none;
+}
+
+.section-2 {
+  padding-top: 16rem;
+  padding-bottom: 8rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: #2D2E40;
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center top -370px;
+  background-size: 150%;
+  border-radius: 0 10rem 0 10rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.section-2 p {
+  line-height: 1.5;
+}
+.section-2 .image {
+  position: relative;
+}
+.section-2 .image img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: -15rem;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+}
+
+.section-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: hsl(208deg, 49%, 24%);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.section-3 p {
+  line-height: 1.5;
+}
+.section-3 .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-3 .desktop-image {
+  display: none;
+}
+.section-3 .mobile-image {
+  display: block;
+  width: 80%;
+  height: auto;
+}
+
+footer {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #24242C;
+  border-radius: 0 10em 0 0;
+}
+footer .link-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer .link-group p {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+}
+footer .link-group a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+footer .link-group a:hover {
+  text-decoration: underline;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+}
+
+@media (max-width: 787px) {
+  .top .margin-right {
+    margin-right: 0;
+  }
+  .top .navbar-collapse {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 0.5em;
+    background-color: hsl(0deg, 0%, 100%);
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: calc(100% - 0px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .top .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-right: 0;
+    width: 100%;
+  }
+  .top .navbar-collapse .nav-link {
+    color: hsl(208deg, 49%, 24%);
+    font-weight: 400;
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    text-align: center;
+  }
+  .top .navbar-collapse .nav-item-dropdown {
+    width: 100%;
+  }
+  .top .navbar-collapse .nav-item .white-btn {
+    background: linear-gradient(to right, hsl(13deg, 100%, 72%) 0%, hsl(353deg, 100%, 62%) 100%);
+    color: white;
+    transition: 0.2s ease-in-out;
+  }
+  .top .navbar-collapse .nav-item .white-btn:hover {
+    color: #ff525d;
+    background: hsl(0deg, 0%, 100%);
+  }
+  .top .navbar-collapse .navbar-buttons {
+    margin-top: 1em;
+    border-top: 1px hsl(240deg, 2%, 79%) solid;
+  }
+  .top .collapse:not(.show) {
     display: none;
   }
-  header .topnav a.icon {
-    float: right;
-    display: block;
+  .top .dropdown-toggle::after {
+    color: hsl(353deg, 100%, 62%);
   }
-}
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 576px) {
-  header .topnav.responsive {
-    position: relative;
+  .top .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    width: calc(100% - 3rem);
+    text-align: center;
   }
-  header .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .top .dropdown .dropdown-item {
+    text-align: center;
+    color: hsl(208deg, 49%, 24%);
   }
-  header .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .top .dropdown .dropdown-item:hover {
+    text-align: center;
+    background-color: #979797;
+    color: hsl(208deg, 49%, 24%);
   }
-  header .topnav.responsive .dropdown {
-    float: none;
-  }
-  header .topnav.responsive .dropdown-content {
-    position: relative;
-  }
-  header .topnav.responsive .dropdown .dropbtn {
-    display: block;
+  .top .dropdown-menu {
+    background-color: #979797;
     width: 100%;
-    text-align: left;
   }
 }
 @media screen and (min-width: 768px) {
@@ -153,10 +372,131 @@ header .dropdown .dropbtn {
     padding-left: 80px;
     padding-right: 80px;
   }
+
+  .top::after {
+    content: "";
+    background-image: url(../images/bg-pattern-intro.svg);
+    width: 150%;
+    height: 293%;
+    left: 8em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -46em;
+    position: absolute;
+  }
+
+  .section-1 {
+    color: hsl(208deg, 49%, 24%);
+    padding-top: 9em;
+    padding-bottom: 9em;
+  }
+  .section-1 .content-grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+  .section-1 .content-grid .description {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: center;
+  }
+  .section-1 .content-grid .image {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .section-1 .content-grid .image .mobile-image {
+    display: none;
+  }
+  .section-1 .content-grid .image .desktop-image {
+    display: block;
+    height: auto;
+    position: relative;
+    right: -100px;
+    width: calc(100% + 160px);
+  }
+
+  .section-2 {
+    background-size: 75%;
+    background-position: left 0 bottom 0;
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 8em;
+    padding-bottom: 8em;
+    position: relative;
+    z-index: 3;
+  }
+  .section-2 .image img {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+  }
+
+  .section-3 {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    z-index: 1;
+  }
+  .section-3 .image {
+    position: relative;
+  }
+  .section-3 .desktop-image {
+    display: block;
+    position: absolute;
+    width: calc(100% + 19rem);
+    height: auto;
+    left: -23rem;
+  }
+  .section-3 .mobile-image {
+    display: none;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  footer .link-group {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 @media screen and (min-width: 992px) {
   .padding-container {
     padding-left: 161px;
     padding-right: 161px;
+  }
+
+  .section-1 .content-grid .description {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: center;
+  }
+  .section-1 .content-grid .image {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    position: relative;
+  }
+  .section-1 .content-grid .image .mobile-image {
+    display: none;
+  }
+  .section-1 .content-grid .image .desktop-image {
+    display: block;
+    height: auto;
+    position: absolute;
+    right: -300px;
+    width: calc(100% + 183px);
+  }
+
+  .section-2 .image {
+    position: relative;
+  }
+  .section-2 .image img {
+    position: absolute;
+    left: 161px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
   }
 }
